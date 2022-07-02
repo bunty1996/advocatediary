@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#238AA9</color>
+    <!--  <color name="colorPrimaryDark">#4972B8</color>-->
+    <color name="colorPrimaryDark">#238AA9</color>
+    <color name="colorAccent">#238AA9</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="header_Color">#4767B0</color>
+
+    <color name="blue">#07A3F8</color>
+
+    // for new designs
+    <color name="new_background_color">#2E95B4</color>
+    <color name="block_title_color">#024153</color>
+
+    <color name="green_color">#238AA9</color>
+
+    <color name="side_bar_background_color">#F6FAFF</color>
+    <color name="side_bar_navigation_default_color">#87919A</color>
+
+    <color name="default_selected_color">#EFF4F8</color>
+
+    <color name="all_screen_background">#EFF4F8</color>
+
+
+    // for Setting screens
+    <color name="setting_screen_color">#87919A</color>
+
+    <color name="edit_title_color">#41545B</color>
+    <color name="edittext_field_color">#879099</color>
+
+
+    <color name="editTextColor_title_add_client">#41545B</color>
+    <!--<color name="editTextColor_field_add_client">#879099</color>-->
+    <color name="editTextColor_field_add_client">#000000</color>
+
+    <color name="editTextColor_field_hint_color">#AAAAAA</color>
+
+
+    //Home screen
+    <color name="first_tab_color_home">#91D55E</color>
+    <color name="second_tab_color_home">#4CD4E4</color>
+    <color name="third_tab_color_home">#FF7055</color>
+</resources>

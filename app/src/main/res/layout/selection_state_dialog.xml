@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+            <TextView
+                    android:id="@+id/tv_cancel_popup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:text="Cancel"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:id="@+id/tv_done_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:text="Done"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+            <TextView
+                    android:id="@+id/tv_title_popup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_done_button"
+                    android:layout_toRightOf="@+id/tv_cancel_popup"
+                    android:gravity="center"
+                    android:text="Country"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="10dp"
+             android:background="@drawable/select_dialog_add_case_search_back">
+
+             <ImageView
+                 android:id="@+id/iv_search_image"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="10dp"
+                 android:src="@drawable/add_case_search" />
+
+             <EditText
+                 android:id="@+id/et_search_name"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:layout_toRightOf="@+id/iv_search_image"
+                 android:background="@android:color/transparent"
+                 android:hint="Search"
+                 android:padding="8dp"
+                 android:singleLine="true"
+                 android:textSize="14sp" />
+         </RelativeLayout>-->
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_country_list"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.e.advocatediary">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+            android:name="com.advocatediary.utils.ApplicationClass"
+            android:allowBackup="true"
+            android:icon="@drawable/new_app_iconn"
+            android:label="@string/app_name"
+            android:networkSecurityConfig="@xml/network_security"
+            android:roundIcon="@drawable/new_app_iconn"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <activity
+                android:name="com.advocatediary.activity.introScreen.IntroScreenActivity"
+                android:label="@string/title_activity_intro_screen"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.allClient.AllClientActivity"
+                android:label="@string/title_activity_all_client"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.common.CommonActivity"
+                android:label="@string/title_activity_common"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.addCaseDetail.AddCaseDetailActivity"
+                android:label="@string/title_activity_add_case_detail"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.resetPassword.ResetPasswordActivity"
+                android:label="@string/title_activity_reset_password"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.splash.SplashActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.phoneVerification.PhoneVerificationActivity"
+                android:label="@string/title_activity_phone_verification"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.addCaseInfo.AddCaseInfoActivity"
+                android:label="@string/title_activity_add_case_info"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.addClient.AddClientActivity"
+                android:label="@string/title_activity_add_client"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.help.HelpActivity"
+                android:label="@string/title_activity_help"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.changePassword.ChangePasswordActivity"
+                android:label="@string/title_activity_change_password"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.forgotPassword.ForgotPasswordActivity"
+                android:label="@string/title_activity_forgot_password"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity
+                android:name="com.advocatediary.activity.FirstScreen.FirstScreenActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.login.LoginActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.register.RegisterActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name="com.advocatediary.activity.home.HomeActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+    </application>
+
+</manifest>

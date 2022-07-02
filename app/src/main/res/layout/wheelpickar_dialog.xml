@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_backgroundd">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <io.blackbox_vision.wheelview.view.WheelView
+                android:id="@+id/loop_view"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                app:canLoop="true"
+                app:centerTextColor="#ff000000"
+                android:layout_gravity="center"
+                app:lineColor="@color/colorPrimary"
+                app:textSize="20sp"
+                android:background="@color/all_screen_background"
+                app:topBottomTextColor="#ffafafaf"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:weightSum="2"
+                      android:padding="10dp"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <Button
+                    android:id="@+id/bt_cancel"
+                    android:text="Cancel"
+                    android:layout_gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"/>
+
+            <Button
+                    android:id="@+id/btn_ok"
+                    android:text="OK"
+                    android:layout_gravity="right"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

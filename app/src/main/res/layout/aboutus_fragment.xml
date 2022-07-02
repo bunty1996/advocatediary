@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <WebView
+                android:id="@+id/myWebView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"/>
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="4dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Advocate Diary is an app that manage Court Case, Clients details of Lawyer/Litigants Professionals . In this app you can Add/Update case and client details, Add new Lawyer, Add new Judge, Add/Update Hearing details, etc.  \n\nYou can manage your case, make appointments, update Case Payment. Using this app lawyer can manage their time and cases in a more efficient way."
+                    android:textColor="#87919A"
+                    android:textSize="15sp"/>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

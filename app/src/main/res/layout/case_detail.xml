@@ -1,0 +1,1912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="@color/all_screen_background"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rel_top_detail_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bt_update_case"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4dp">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/case_detail_back_code"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                <LinearLayout
+                                        android:id="@+id/linear_today_first"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="42dp"
+                                        android:background="@color/block_title_color"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical|start"
+                                            android:padding="5dp">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:text="Client Detail"
+                                                android:textColor="#ffffff"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"/>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical|end"
+                                            android:padding="5dp">
+
+                                        <ImageView
+                                                android:id="@+id/img_today_down_first"
+                                                android:layout_width="30dp"
+                                                android:layout_height="20dp"
+                                                android:layout_marginRight="5dp"
+                                                android:padding="2dp"
+                                                android:tint="#ffffff"
+                                                android:src="@drawable/down_arrow"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:id="@+id/linear_client_detail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="visible">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="3dp"
+                                            android:orientation="horizontal"
+                                            android:weightSum="4">
+
+                                        <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:text="Name  :  "
+                                                android:textColor="#000000"
+                                                android:textSize="13sp"
+                                                android:textStyle="bold|italic"
+                                                android:visibility="gone"/>
+
+                                        <TextView
+                                                android:id="@+id/tv_name_detail"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_weight="3"
+                                                android:padding="1dp"
+                                                android:text=""
+                                                android:textColor="#000000"
+                                                android:textSize="13sp"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:background="#2D000000"
+                                                android:visibility="gone"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:id="@+id/linear_email_value"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="gone"
+                                            android:orientation="horizontal"
+                                            android:weightSum="4">
+
+                                        <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:text="Email Id  :  "
+                                                android:textColor="#000000"
+                                                android:textSize="13sp"
+                                                android:textStyle="bold|italic"
+                                                android:visibility="gone"/>
+
+                                        <TextView
+                                                android:id="@+id/tv_email_detail"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_weight="3.5"
+                                                android:autoLink="email"
+                                                android:layout_marginTop="3dp"
+                                                android:inputType="textWebEmailAddress"
+                                                android:padding="1dp"
+                                                android:text=""
+                                                android:textColor="#3E86D1"
+                                                android:textSize="13sp"/>
+
+                                        <ImageView
+                                                android:id="@+id/iv_email_send"
+                                                android:layout_width="0dp"
+                                                android:layout_height="20dp"
+                                                android:layout_weight="0.5"
+                                                android:src="@drawable/email_send_icon"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:background="#2D000000"
+                                                android:visibility="gone"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="3dp"
+                                            android:orientation="horizontal"
+                                            android:weightSum="4">
+
+                                        <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="3.5"
+                                                android:orientation="horizontal">
+
+                                            <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:text="Phone No:  "
+                                                    android:textColor="#000000"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="bold"
+                                                    android:visibility="gone"/>
+
+                                            <TextView
+                                                    android:id="@+id/tv_phone_detail"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="15dp"
+                                                    android:padding="0dp"
+                                                    android:text=""
+                                                    android:textColor="#000000"
+                                                    android:textSize="13sp"/>
+                                        </LinearLayout>
+
+                                        <ImageView
+                                                android:id="@+id/iv_phone_dial"
+                                                android:layout_width="0dp"
+                                                android:layout_height="20dp"
+                                                android:layout_weight="0.5"
+                                                android:src="@drawable/call_icon"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:background="#2D000000"
+                                                android:visibility="gone"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:orientation="vertical"
+                                            android:visibility="gone">
+
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:text="Zip Code  :  "
+                                                android:textSize="13sp"
+                                                android:textStyle="bold|italic"
+                                                android:visibility="gone"/>
+
+                                        <TextView
+                                                android:id="@+id/tv_pincode_detail"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="15dp"
+                                                android:padding="1dp"
+                                                android:text=""
+                                                android:layout_marginTop="3dp"
+                                                android:textColor="#000000"
+                                                android:textSize="13sp"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:background="#2D000000"
+                                                android:visibility="gone"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:id="@+id/linear_place"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="gone"
+                                            android:orientation="horizontal"
+                                            android:weightSum="4">
+
+                                        <TextView
+                                                android:id="@+id/tv_place_title"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="15dp"
+                                                android:text="Place:  "
+                                                android:textColor="#000000"
+                                                android:layout_marginTop="0dp"
+                                                android:textSize="13sp"
+                                                android:textStyle="bold"
+                                                android:visibility="visible"/>
+
+                                        <TextView
+                                                android:id="@+id/tv_city_detail"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:padding="0dp"
+                                                android:layout_marginTop="0dp"
+                                                android:text=""
+                                                android:textColor="#000000"
+                                                android:textSize="13sp"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:background="#2D000000"
+                                                android:visibility="gone"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:layout_marginBottom="3dp"
+                                            android:layout_weight="4"
+                                            android:orientation="horizontal">
+
+                                        <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1"
+                                                android:text="Gender  :  "
+                                                android:textColor="#000000"
+                                                android:textSize="13sp"
+                                                android:textStyle="bold|italic"
+                                                android:visibility="gone"/>
+
+                                        <TextView
+                                                android:id="@+id/tv_male_detail"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_weight="3"
+                                                android:padding="1dp"
+                                                android:layout_marginTop="0dp"
+                                                android:text=""
+                                                android:textColor="#000000"
+                                                android:textSize="13sp"/>
+
+                                        <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="1dp"
+                                                android:background="#2D000000"
+                                                android:visibility="gone"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.CardView
+                                hardwareAccelerated="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.3dp"
+                                android:layout_marginBottom="3dp"
+                                android:visibility="gone"
+                                app:cardCornerRadius="3dp">
+
+                            <LinearLayout
+                                    android:id="@+id/todaylist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/rv_today_list"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="400dp"
+                                        android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4dp">
+                    <LinearLayout
+                            android:id="@+id/linear_second_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/case_detail_back_code"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:id="@+id/linear_tomorrow_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:background="@color/block_title_color"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical|start"
+                                        android:padding="5dp">
+
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="Case Info"
+                                            android:textColor="#ffffff"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical|end"
+                                        android:padding="5dp">
+
+                                    <ImageView
+                                            android:id="@+id/img_tomorrow_down_second"
+                                            android:layout_width="30dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginRight="5dp"
+                                            android:padding="2dp"
+                                            android:tint="#ffffff"
+                                            android:src="@drawable/down_arrow"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:id="@+id/linear_case_info"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="3dp"
+                                    android:visibility="visible">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="0dp"
+                                        android:orientation="horizontal"
+                                        android:visibility="gone"
+                                        android:weightSum="4">
+
+                                    <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:text="Place  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <!-- <TextView
+                                         android:id="@+id/tv_place_case_info"
+                                         android:layout_width="0dp"
+                                         android:layout_height="wrap_content"
+                                         android:layout_marginLeft="15dp"
+                                         android:layout_weight="3"
+                                         android:padding="1dp"
+                                         android:text=""
+                                         android:textColor="#000000"
+                                         android:textSize="13sp" />-->
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:text="Case Type  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_case_type_case_info"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="3"
+                                            android:layout_marginTop="3dp"
+                                            android:padding="1dp"
+                                            android:text=""
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:weightSum="4">
+
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="Court Name  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_court_name_case_info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginRight="3dp"
+                                            android:layout_marginTop="3dp"
+                                            android:padding="1dp"
+                                            android:text=""
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_place_case_info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginTop="3dp"
+                                            android:padding="1dp"
+                                            android:text=""
+                                            android:visibility="gone"
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:text="Section  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_section"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="3"
+                                            android:padding="1dp"
+                                            android:layout_marginTop="3dp"
+                                            android:text=""
+                                            android:visibility="visible"
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="0dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:text="Other Party  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_other_party_case_info"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="3"
+                                            android:layout_marginTop="3dp"
+                                            android:padding="1dp"
+                                            android:text=""
+                                            android:visibility="visible"
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="0dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="4">
+
+                                    <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:text="Judge Name  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_judge_name_case_info"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="3"
+                                            android:padding="1dp"
+                                            android:layout_marginTop="3dp"
+
+                                            android:text=""
+                                            android:visibility="visible"
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="0dp"
+                                        android:orientation="horizontal">
+
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="Other Party Lawyer Name  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_other_party_lawyer_name_case_info"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:padding="0dp"
+                                            android:layout_marginTop="3dp"
+
+                                            android:text=""
+                                            android:visibility="visible"
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:orientation="horizontal">
+
+                                    <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:text="Date of Filing  :  "
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic"
+                                            android:visibility="gone"/>
+
+                                    <TextView
+                                            android:id="@+id/tv_date_of_filing"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:padding="0dp"
+                                            android:text=""
+                                            android:textColor="#000000"
+                                            android:textSize="13sp"/>
+
+                                    <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#2D000000"
+                                            android:visibility="gone"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--  <android.support.v7.widget.RecyclerView
+                              android:id="@+id/rv_tommorrow_list"
+                              android:layout_width="match_parent"
+                              android:visibility="gone"
+                              android:layout_height="0dp"
+                              android:layout_weight="1"></android.support.v7.widget.RecyclerView>-->
+                        <android.support.v7.widget.CardView
+                                hardwareAccelerated="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.3dp"
+                                android:layout_marginBottom="3dp"
+                                android:visibility="gone"
+                                app:cardCornerRadius="3dp">
+
+                            <LinearLayout
+                                    android:id="@+id/tomorrowlist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:scrollbars="none">
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                        <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#ffffff"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:padding="8dp"
+                                                android:weightSum="1">
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="-5dp"
+                                                    android:layout_weight="0.1">
+
+                                                <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content">
+
+                                                    <TextView
+                                                            android:layout_width="40dp"
+                                                            android:layout_height="40dp"
+                                                            android:background="@drawable/circle_green"
+                                                            android:gravity="center"
+                                                            android:padding="2dp"
+                                                            android:text="A"
+                                                            android:textSize="20sp"
+                                                            android:textStyle="bold"/>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.5">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                    <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="start"
+                                                            android:orientation="horizontal">
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="Ashish Malhotra"
+                                                                android:textColor="#3A3A3A"
+                                                                android:textSize="14dp"
+                                                                android:textStyle="bold"/>
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="  (Murder)"
+                                                                android:textColor="#000000"
+                                                                android:textSize="14dp"/>
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="start"
+                                                            android:orientation="horizontal">
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="Himachal Predesh High Court"
+                                                                android:textColor="#000000"
+                                                                android:textSize="12dp"/>
+
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.3">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                    <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="end"
+                                                            android:singleLine="true"
+                                                            android:text="Evidence"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textSize="14dp"
+                                                            android:textStyle="bold"/>
+
+                                                    <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="end"
+                                                            android:text="Himachal"
+                                                            android:textColor="#000000"
+                                                            android:textSize="12dp"/>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#ffffff"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:padding="8dp"
+                                                android:weightSum="1">
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="-5dp"
+                                                    android:layout_weight="0.1">
+
+                                                <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content">
+
+                                                    <TextView
+                                                            android:layout_width="40dp"
+                                                            android:layout_height="40dp"
+                                                            android:background="@drawable/circle_orange"
+                                                            android:gravity="center"
+                                                            android:padding="2dp"
+                                                            android:text="B"
+                                                            android:textSize="20sp"
+                                                            android:textStyle="bold"/>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.5">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                    <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="start"
+                                                            android:orientation="horizontal">
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="Bunty Rana"
+                                                                android:textColor="#3A3A3A"
+                                                                android:textSize="14dp"
+                                                                android:textStyle="bold"/>
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="  (Murder)"
+                                                                android:textColor="#000000"
+                                                                android:textSize="14dp"/>
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="start"
+                                                            android:orientation="horizontal">
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="Punjab haryana High Court"
+                                                                android:textColor="#000000"
+                                                                android:textSize="12dp"/>
+
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.3">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                    <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="end"
+                                                            android:singleLine="true"
+                                                            android:text="Evidence"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textSize="14dp"
+                                                            android:textStyle="bold"/>
+
+                                                    <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="end"
+                                                            android:text="Shimla"
+                                                            android:textColor="#000000"
+                                                            android:textSize="12dp"/>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="#ffffff"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:padding="8dp"
+                                                android:weightSum="1">
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="-5dp"
+                                                    android:layout_weight="0.1">
+
+                                                <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content">
+
+                                                    <TextView
+                                                            android:layout_width="40dp"
+                                                            android:layout_height="40dp"
+                                                            android:background="@drawable/circle_blue"
+                                                            android:gravity="center"
+                                                            android:padding="2dp"
+                                                            android:text="V"
+                                                            android:textSize="20sp"
+                                                            android:textStyle="bold"/>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.5">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                    <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="start"
+                                                            android:orientation="horizontal">
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="Viney kumar"
+                                                                android:textColor="#3A3A3A"
+                                                                android:textSize="14dp"
+                                                                android:textStyle="bold"/>
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="  (Murder)"
+                                                                android:textColor="#000000"
+                                                                android:textSize="14dp"/>
+
+                                                    </LinearLayout>
+
+                                                    <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="start"
+                                                            android:orientation="horizontal">
+
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:gravity="start"
+                                                                android:singleLine="true"
+                                                                android:text="Punjab haryana High Court"
+                                                                android:textColor="#000000"
+                                                                android:textSize="12dp"/>
+
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.3">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:orientation="vertical">
+
+                                                    <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="end"
+                                                            android:singleLine="true"
+                                                            android:text="Evidence"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textSize="14dp"
+                                                            android:textStyle="bold"/>
+
+                                                    <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="end"
+                                                            android:text="Haryana"
+                                                            android:textColor="#000000"
+                                                            android:textSize="12dp"/>
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </ScrollView>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <LinearLayout
+                        android:id="@+id/rel_top_payment_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical"
+
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp">
+
+                    <android.support.v7.widget.CardView
+                            hardwareAccelerated="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="4dp">
+                        <LinearLayout
+                                android:id="@+id/linear_third_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="0dp"
+                                android:gravity="center|top"
+                                android:layout_alignParentTop="true"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                            <android.support.v7.widget.CardView
+                                    hardwareAccelerated="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    app:cardCornerRadius="0dp">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/case_detail_back_code"
+                                        android:orientation="vertical">
+
+                                    <LinearLayout
+                                            android:id="@+id/linear_additional_payment_third"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="42dp"
+                                            android:background="@color/block_title_color"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                        <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:gravity="center_vertical|start"
+                                                android:padding="5dp">
+
+                                            <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:text="Payment History"
+
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="15sp"
+                                                    android:textStyle="bold"/>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_weight="1"
+                                                android:gravity="center_vertical|end"
+                                                android:padding="5dp">
+
+                                            <TextView
+                                                    android:id="@+id/tv_plus_payment"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginRight="5dp"
+                                                    android:paddingLeft="5dp"
+                                                    android:paddingRight="5dp"
+                                                    android:text="+"
+                                                    android:textColor="#4972B8"
+                                                    android:textSize="25sp"
+                                                    android:visibility="gone"/>
+
+                                            <ImageView
+                                                    android:id="@+id/iv_plus_payment"
+                                                    android:layout_width="23dp"
+                                                    android:layout_height="23dp"
+                                                    android:src="@drawable/new_add_iconn"
+                                                    android:visibility="invisible"/>
+
+                                            <ImageView
+                                                    android:id="@+id/img_pending_down_payment_third"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="20dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:padding="2dp"
+                                                    android:tint="@color/white"
+                                                    android:src="@drawable/down_arrow"/>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                            android:id="@+id/linear_payment_dataa"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+
+                                            android:orientation="vertical"
+                                            android:visibility="visible">
+
+                                        <LinearLayout
+                                                android:id="@+id/linear_top_payment"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:visibility="visible">
+
+                                            <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal"
+                                                    android:paddingLeft="10dp"
+                                                    android:paddingTop="3dp"
+                                                    android:paddingRight="10dp">
+
+                                                <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+
+                                                        android:text="Total Fee  : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="13sp"/>
+
+                                                <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="10dp"
+                                                        android:orientation="horizontal">
+
+                                                    <EditText
+                                                            android:id="@+id/tv_ruppess"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="bottom"
+                                                            android:background="@android:color/transparent"
+                                                            android:enabled="false"
+                                                            android:gravity="start"
+                                                            android:inputType="number"
+                                                            android:singleLine="true"
+                                                            android:text="@string/Rs_symbol"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textColorHint="#7E000000"
+                                                            android:textSize="14sp"
+                                                            android:visibility="visible"/>
+
+                                                    <TextView
+                                                            android:id="@+id/tv_total_fee_data"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text=""
+                                                            android:textColor="#3A3A3A"
+                                                            android:textSize="13sp"/>
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <View
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0.2dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:background="@color/colorPrimary"
+                                                    android:padding="2dp"
+                                                    tools:ignore="Suspicious0dp"></View>
+
+                                            <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal"
+                                                    android:paddingLeft="10dp"
+                                                    android:paddingTop="3dp"
+                                                    android:paddingRight="10dp">
+
+                                                <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Total Paid : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="13sp"/>
+
+                                                <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="10dp"
+                                                        android:orientation="horizontal">
+
+                                                    <EditText
+                                                            android:id="@+id/tv_ruppess_advance_icon"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="bottom"
+                                                            android:background="@android:color/transparent"
+
+                                                            android:enabled="false"
+                                                            android:gravity="start"
+                                                            android:inputType="number"
+                                                            android:singleLine="true"
+                                                            android:text="@string/Rs_symbol"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textColorHint="#7E000000"
+                                                            android:textSize="14sp"
+                                                            android:visibility="visible"/>
+
+                                                    <TextView
+                                                            android:id="@+id/tv_advance_fee_data"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="0"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textSize="13sp"/>
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <View
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0.2dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:background="@color/colorPrimary"
+                                                    android:padding="2dp"
+                                                    tools:ignore="Suspicious0dp"></View>
+
+                                            <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="3dp"
+                                                    android:orientation="horizontal"
+                                                    android:paddingLeft="10dp"
+                                                    android:paddingRight="10dp"
+                                                    android:visibility="gone"
+                                                    android:weightSum="4">
+
+                                                <TextView
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_weight="1.3"
+                                                        android:text="Pending Fee : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="13sp"/>
+
+                                                <LinearLayout
+                                                        android:layout_width="0dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_weight="2.7"
+                                                        android:orientation="horizontal">
+
+                                                    <EditText
+                                                            android:id="@+id/tv_ruppess_pending_icon"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="bottom"
+                                                            android:background="@android:color/transparent"
+                                                            android:enabled="false"
+                                                            android:gravity="start"
+                                                            android:inputType="number"
+                                                            android:singleLine="true"
+                                                            android:text="@string/Rs_symbol"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textColorHint="#7E000000"
+                                                            android:textSize="14sp"
+                                                            android:visibility="visible"/>
+
+                                                    <TextView
+                                                            android:id="@+id/tv_pending_fee_data11"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="0"
+                                                            android:textColor="#3A3A3A"
+                                                            android:textSize="13sp"/>
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <View
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0.2dp"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:background="@color/colorPrimary"
+                                                    android:padding="2dp"
+                                                    android:visibility="gone"
+                                                    tools:ignore="Suspicious0dp"></View>
+                                        </LinearLayout>
+
+                                        <android.support.v7.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                app:cardElevation="4dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginBottom="6dp"
+                                                app:cardCornerRadius="4dp">
+                                            <LinearLayout
+                                                    android:id="@+id/linear_payment_history11"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:background="@color/colorPrimary"
+                                                        android:orientation="horizontal"
+                                                        android:weightSum="2">
+
+                                                    <TextView
+                                                            android:id="@+id/tv_first_text"
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center"
+                                                            android:paddingTop="5dp"
+                                                            android:paddingBottom="5dp"
+                                                            android:text="Date"
+                                                            android:textColor="#ffffff"
+                                                            android:textStyle="bold"/>
+
+                                                    <View
+                                                            android:layout_width="1dp"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@color/colorPrimary"/>
+
+                                                    <TextView
+                                                            android:id="@+id/tv_second_text"
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="8dp"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center"
+                                                            android:paddingTop="5dp"
+                                                            android:paddingBottom="5dp"
+                                                            android:text="Payment"
+                                                            android:textColor="#ffffff"
+                                                            android:textStyle="bold"/>
+
+                                                    <View
+                                                            android:layout_width="1dp"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@color/colorPrimary"
+                                                            android:visibility="gone"/>
+
+                                                    <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="8dp"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center"
+                                                            android:paddingTop="5dp"
+                                                            android:paddingBottom="5dp"
+                                                            android:text="Notes"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold"
+                                                            android:visibility="gone"/>
+
+                                                    <!-- <View
+                                                            android:layout_width="1dp"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@android:color/darker_gray" />
+
+                                                        <TextView
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginLeft="8dp"
+                                                            android:layout_weight="1"
+                                                            android:padding="5dp"
+                                                            android:textColor="#000000"
+                                                            android:text="Pending Payment" />-->
+                                                </LinearLayout>
+
+                                                <android.support.v7.widget.RecyclerView
+                                                        android:id="@+id/rv_payment_history"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:visibility="visible"
+                                                        android:layout_marginLeft="0dp"
+                                                        android:layout_marginRight="0dp"></android.support.v7.widget.RecyclerView>
+
+                                            </LinearLayout>
+                                        </android.support.v7.widget.CardView>
+                                        <ListView
+                                                android:id="@+id/listview"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="gone"></ListView>
+
+                                        <android.support.v7.widget.RecyclerView
+                                                android:id="@+id/rv_payment"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginBottom="5dp"
+                                                android:visibility="gone"></android.support.v7.widget.RecyclerView>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </android.support.v7.widget.CardView>
+
+                            <!-- <android.support.v7.widget.CardView
+                                 hardwareAccelerated="true"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginTop="0.3dp"
+                                 android:layout_marginBottom="3dp"
+                                 app:cardCornerRadius="3dp">
+
+                                 <android.support.v7.widget.RecyclerView
+                                     android:id="@+id/rv_pending_list_home"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+                             </android.support.v7.widget.CardView>-->
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <!--  <LinearLayout
+                              android:id="@+id/linear_pending22"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@+id/linear_third_layout"
+                              android:layout_marginLeft="0dp"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginRight="0dp"
+                              android:layout_marginBottom="20dp"
+                              android:orientation="vertical"
+                              android:visibility="visible">
+
+                          <LinearLayout
+                                  android:id="@+id/linear_pending2"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="42dp"
+                                  android:background="#dcecc8"
+                                  android:gravity="center"
+                                  android:orientation="horizontal">
+
+                              <LinearLayout
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_weight="1"
+                                      android:gravity="center_vertical|start"
+                                      android:padding="5dp">
+
+                                  <TextView
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:layout_marginLeft="10dp"
+                                          android:text="Case History"
+                                          android:textColor="#000000"
+                                          android:textSize="15sp"
+                                          android:textStyle="bold"/>
+
+
+                              </LinearLayout>
+
+                              <LinearLayout
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_weight="1"
+                                      android:gravity="center_vertical|end"
+                                      android:padding="5dp">
+
+                                  <ImageView
+                                          android:id="@+id/img_pending_down1"
+                                          android:layout_width="30dp"
+                                          android:layout_height="20dp"
+                                          android:layout_marginRight="5dp"
+                                          android:padding="2dp"
+                                          android:src="@drawable/down_arrow"/>
+
+                              </LinearLayout>
+
+                          </LinearLayout>
+
+                      </LinearLayout>-->
+
+                    <RelativeLayout
+                            android:id="@+id/rel_fourth_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                        <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="4dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:cardCornerRadius="4dp">
+                            <LinearLayout
+                                    android:id="@+id/linear_fourth_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|top"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                    <LinearLayout
+                                            android:id="@+id/linear_pending_fourth"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="42dp"
+                                            android:background="@color/block_title_color"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                        <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:gravity="center_vertical|start"
+                                                android:padding="5dp">
+
+                                            <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:text="Case History"
+                                                    android:textColor="#ffffff"
+                                                    android:textSize="15sp"
+                                                    android:textStyle="bold"/>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:gravity="center_vertical|end"
+                                                android:padding="5dp">
+
+                                            <ImageView
+                                                    android:id="@+id/img_pending_down_fourth"
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="20dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:padding="2dp"
+                                                    android:tint="#ffffff"
+                                                    android:src="@drawable/down_arrow"/>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <android.support.v7.widget.CardView
+                                            android:id="@+id/cardview_case_history"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            app:cardCornerRadius="4dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:layout_marginTop="6dp"
+                                            android:layout_marginBottom="6dp"
+                                            app:cardElevation="4dp">
+                                        <LinearLayout
+                                                android:id="@+id/linear_case_history"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="gone"
+                                                android:orientation="vertical">
+                                            <LinearLayout
+                                                    android:id="@+id/linear_case_history_title"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="0dp"
+                                                    android:orientation="vertical">
+
+                                                <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:background="@color/colorPrimary"
+                                                        android:orientation="horizontal"
+                                                        android:weightSum="3">
+
+                                                    <TextView
+                                                            android:id="@+id/tv_first_text_case"
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginLeft="3dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="3dp"
+                                                            android:layout_marginBottom="3dp"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center"
+
+                                                            android:text="Prev Date"
+                                                            android:textColor="#ffffff"
+                                                            android:textStyle="bold"/>
+
+                                                    <View
+                                                            android:layout_width="1dp"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@color/colorPrimary"/>
+
+                                                    <TextView
+                                                            android:id="@+id/tv_second_text_case"
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginLeft="3dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="3dp"
+                                                            android:layout_marginBottom="3dp"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center"
+                                                            android:text="Next Date"
+                                                            android:textColor="#ffffff"
+                                                            android:textStyle="bold"/>
+
+                                                    <View
+                                                            android:layout_width="1dp"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@color/colorPrimary"/>
+
+                                                    <TextView
+                                                            android:id="@+id/tv_third_case"
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginLeft="3dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="3dp"
+                                                            android:layout_marginBottom="3dp"
+                                                            android:layout_weight="1"
+                                                            android:gravity="center"
+                                                            android:text="Purpose"
+                                                            android:textColor="#ffffff"
+                                                            android:textStyle="bold"/>
+
+                                                    <View
+                                                            android:layout_width="1dp"
+                                                            android:layout_height="match_parent"
+                                                            android:visibility="gone"
+                                                            android:background="@color/colorPrimary"/>
+
+                                                    <TextView
+                                                            android:id="@+id/tv_fourth_case"
+                                                            android:layout_width="0dp"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_gravity="center"
+                                                            android:layout_marginLeft="3dp"
+                                                            android:layout_marginTop="3dp"
+                                                            android:layout_marginRight="3dp"
+                                                            android:layout_marginBottom="3dp"
+                                                            android:layout_weight="1"
+                                                            android:visibility="gone"
+                                                            android:gravity="center"
+                                                            android:text="Notes"
+                                                            android:textColor="#000000"
+                                                            android:textStyle="bold"/>
+                                                </LinearLayout>
+
+                                                <View
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="1dp"
+                                                        android:visibility="gone"
+                                                        android:layout_marginTop="0dp"
+                                                        android:background="@color/colorPrimary"/>
+                                            </LinearLayout>
+
+                                            <android.support.v7.widget.RecyclerView
+                                                    android:id="@+id/rv_case_history"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:visibility="visible"></android.support.v7.widget.RecyclerView>
+                                        </LinearLayout>
+                                    </android.support.v7.widget.CardView>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <TextView
+                                android:id="@+id/tv_bottom_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/bt_update_case"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/case_detail_update"
+                android:text="Update"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

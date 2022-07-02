@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "370225392020",
+    "firebase_url": "https://advocate-diary-d18e3.firebaseio.com",
+    "project_id": "advocate-diary-d18e3",
+    "storage_bucket": "advocate-diary-d18e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370225392020:android:20c6caf8618164da144781",
+        "android_client_info": {
+          "package_name": "com.e.advocatediary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370225392020-5o3ih25mijcisr7vdp07kl3vgfc9gma3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.e.advocatediary",
+            "certificate_hash": "98eb4b86a04ee2c5964f8c0abb5d9b7c8a44f797"
+          }
+        },
+        {
+          "client_id": "370225392020-bjq58tuc24qiupupnjijm4nmfg01eoan.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTenVCOZL1jqtKfaFs9eIDJB5WrIuBqqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370225392020-bjq58tuc24qiupupnjijm4nmfg01eoan.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

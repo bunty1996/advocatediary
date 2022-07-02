@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+    <LinearLayout
+            android:id="@+id/linear_full_layout_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4D7DBF"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="Update Case"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold|italic" />
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/update_case_back_iconn" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                    <!--<LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="0dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="0dp"
+                                android:text="R"
+                                android:textColor="#6B7A99"
+                                android:textSize="20sp"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="0dp"
+
+                                android:src="@drawable/update_case_back_iconn" />
+                        </LinearLayout>-->
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4.3">
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.3"
+                                android:orientation="vertical">
+
+                            <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@drawable/circle_brown">
+
+                                <TextView
+                                        android:id="@+id/tv_first_capital"
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:paddingLeft="0dp"
+                                        android:paddingTop="0dp"
+                                        android:paddingRight="0dp"
+                                        android:paddingBottom="0dp"
+                                        android:text="A"
+                                        android:textColor="#6B7A99"
+                                        android:textSize="35sp"
+                                        android:textStyle="bold|italic" />
+                            </RelativeLayout>
+
+                            <TextView
+                                    android:id="@+id/tv_case_client_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:paddingLeft="1dp"
+                                    android:paddingTop="1dp"
+                                    android:paddingRight="1dp"
+                                    android:paddingBottom="8dp"
+                                    android:text="Advocate"
+                                    android:textColor="#191718"
+                                    android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="5dp"
+                                    android:orientation="vertical">
+
+                                <TextView
+                                        android:id="@+id/tv_next_date_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp"
+                                        android:text="Next Date"
+                                        android:visibility="gone"
+                                        android:textSize="14sp" />
+
+                                <TextView
+                                        android:id="@+id/tv_next_date_update"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Nextdate"
+                                        android:padding="5dp"
+                                        android:singleLine="true"
+                                        android:textColor="#191718"
+
+                                        android:textSize="14sp" />
+
+
+                                <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#E4E4E4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:orientation="vertical">
+
+                                <EditText
+                                        android:id="@+id/et_update_status"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@android:color/transparent"
+                                        android:hint="Status"
+                                        android:padding="5dp"
+                                        android:singleLine="true"
+                                        android:textColor="#191718"
+                                        android:textColorHint="#191718"
+                                        android:textSize="14sp"
+                                        android:visibility="gone" />
+
+                                <AutoCompleteTextView
+                                        android:id="@+id/autoCompleteTextView_casetype"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="0dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@android:color/transparent"
+                                        android:ems="10"
+                                        android:hint="Status"
+                                        android:imeOptions="actionNext"
+                                        android:padding="5dp"
+                                        android:singleLine="true"
+                                        android:textColorHint="#191718"
+                                        android:textSize="14sp"
+                                        android:visibility="gone">
+
+                                </AutoCompleteTextView>
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                    <TextView
+                                            android:id="@+id/tv_purpose_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Purpose"
+                                            android:textSize="14sp" />
+
+                                    <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                        <TextView
+                                                android:id="@+id/tv_Status_selection"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="0dp"
+                                                android:layout_toLeftOf="@+id/iv_down_arrow_case_type"
+                                                android:layout_weight="1"
+                                                android:background="@android:color/transparent"
+                                                android:ems="10"
+                                                android:hint="Purpose"
+                                                android:imeOptions="actionNext"
+                                                android:singleLine="true"
+                                                android:textColor="#000000"
+                                                android:textColorHint="#000000"
+                                                android:textSize="14sp" />
+
+                                        <ImageView
+                                                android:id="@+id/iv_down_arrow_case_type"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_centerVertical="true"
+                                                android:src="@drawable/down_arrow" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                                <Spinner
+                                        android:id="@+id/spinner_status"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="0dp"
+                                        android:visibility="gone"></Spinner>
+
+                                <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="#E4E4E4" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginRight="5dp"
+                                    android:orientation="vertical">
+
+                                <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:orientation="horizontal">
+
+                                    <EditText
+                                            android:id="@+id/tv_ruppess"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="#ffffff"
+                                            android:enabled="false"
+                                            android:gravity="start"
+                                            android:inputType="number"
+                                            android:layout_gravity="bottom"
+                                            android:layout_marginBottom="2dp"
+                                            android:singleLine="true"
+                                            android:text="@string/Rs_symbol"
+                                            android:textColor="#3A3A3A"
+                                            android:textColorHint="#000000"
+                                            android:textSize="14sp"
+                                            android:visibility="gone" />
+
+                                    <android.support.design.widget.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                        <EditText
+                                                android:id="@+id/et_payment_update"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="@android:color/transparent"
+                                                android:hint="Payment"
+                                                android:inputType="number"
+                                                android:paddingLeft="0dp"
+                                                android:paddingTop="5dp"
+                                                android:paddingRight="5dp"
+                                                android:paddingBottom="5dp"
+                                                android:singleLine="true"
+                                                android:textColor="#191718"
+
+                                                android:textColorHint="#191718"
+                                                android:textSize="14sp" />
+                                    </android.support.design.widget.TextInputLayout>
+                                </LinearLayout>
+
+                                <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#E4E4E4" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="visible">
+                    <TextView
+                            android:id="@+id/tv_Notes_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="Notes"
+                            android:textSize="14sp" />
+                    <EditText
+                            android:id="@+id/et_notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/add_case_notes"
+                            android:gravity="start"
+                            android:hint="Enter Notes"
+                            android:padding="5dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#3A3A3A"
+                            android:textSize="14sp" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#969393"
+                            android:padding="2dp"
+                            android:visibility="gone"
+                            tools:ignore="Suspicious0dp"></View>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="visible">
+
+                    <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/check_box_important"
+                            android:layout_width="wrap_content"
+                            android:text="Important hearing"
+                            android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <Button
+                        android:id="@+id/bt_update_case"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/blue_submit_button"
+
+                        android:gravity="center"
+                        android:text="Done"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

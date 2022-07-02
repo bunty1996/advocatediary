@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:fab="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="@color/all_screen_background"
+                android:layout_height="match_parent">
+
+    <include layout="@layout/no_internet_connection"/>
+
+    <LinearLayout
+            android:id="@+id/linear_all_my_client"
+            android:background="@color/all_screen_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <include layout="@layout/case_search_layout"/>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/card_view_my_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="4dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:id="@+id/linear_ClientDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|start"
+                            android:padding="0dp">
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|start"
+                                android:padding="10dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="My Clients"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:id="@+id/tv_case_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text=""
+                                    android:textColor="#ffffff"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/card_view_clientss"
+                        android:layout_width="match_parent"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_height="wrap_content">
+                <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/refresh_swipe_layout"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+
+                        android:layout_width="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_my_clients"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                        android:id="@+id/no_client_found"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@color/all_screen_background"
+                        android:visibility="gone">
+                    <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardElevation="4dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="3dp"
+                            app:cardCornerRadius="4dp">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.2"></LinearLayout>
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+                                <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:visibility="gone"
+                                        android:src="@drawable/no_data_found"/>
+
+                                <pl.droidsonroids.gif.GifImageView
+                                        android:id="@+id/gif_no_data_found"
+                                        android:layout_width="match_parent"
+                                        android:layout_margin="15dp"
+                                        android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+                                <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="No Clients Added Yet"
+                                        android:textColor="#3F535A"
+                                        android:textSize="18sp"
+                                        android:layout_marginTop="0dp"
+                                        android:textStyle="bold|italic"/>
+
+                                <TextView
+                                        android:id="@+id/tv_my_client_title11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="12dp"
+                                        android:gravity="center"
+                                        android:text="Sorry for the movement you don't have what you\n need, you can try later."
+                                        android:textColor="#969FA7"
+                                        android:textSize="14sp"/>
+
+                                <Button
+                                        android:id="@+id/bt_add_case_tap_retry"
+                                        android:layout_width="170dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:background="@drawable/blue_submit_button"
+                                        android:text="Tap To Retry"
+                                        android:textAllCaps="false"
+                                        android:textColor="#ffffff"
+                                        android:textSize="14sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+    </LinearLayout>
+    <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu_fab_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            app:menu_icon="@drawable/ic_add"
+            app:menu_shadowColor="@color/green_color"
+            android:layout_centerInParent="true"
+            android:foregroundGravity="center"
+            fab:menu_animationDelayPerItem="0"
+            android:backgroundTint="@color/green_color"
+            app:menu_colorNormal="@color/green_color">
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_add_client_client"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:fab_label="Add Client"
+                app:useCompatPadding="false"
+
+                app:fab_size="normal"
+                android:src="@drawable/add_new_clientt_iconn"/>
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_add_case_client"
+                style="@style/MenuButtonsStyle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:fab_label="Add Case"
+                app:fab_size="normal"
+                app:useCompatPadding="false"
+                android:src="@drawable/add_new_case_iconn"/>
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

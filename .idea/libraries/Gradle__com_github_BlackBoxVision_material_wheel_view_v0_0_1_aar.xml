@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.BlackBoxVision:material-wheel-view:v0.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-wheel-view-v0.0.1.aar/827954e70a643c03a8502b2e424b5a1e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-wheel-view-v0.0.1.aar/827954e70a643c03a8502b2e424b5a1e/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-wheel-view-v0.0.1.aar/827954e70a643c03a8502b2e424b5a1e/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

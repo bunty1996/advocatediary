@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/splash_screen2"
+              android:layout_gravity="center"
+              android:gravity="center"
+              tools:context="com.advocatediary.activity.splash.SplashActivity">
+
+        <ImageView
+                android:id="@+id/iv_splash_image"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logoo2"/>
+
+</LinearLayout>

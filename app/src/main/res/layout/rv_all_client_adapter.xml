@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/rel_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selected_item_show"
+                android:padding="9dp">
+
+            <TextView
+                    android:id="@+id/tv_name_first_value"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/circle_name_title"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:alpha="@dimen/circle_alpha_name"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic" />
+
+            <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_name_first_value"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:layout_toLeftOf="@+id/tv_total_cases"
+                    android:layout_centerVertical="true"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/tv_court_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_user_name"
+                    android:layout_toRightOf="@+id/tv_name_first_value"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+            <TextView
+                    android:id="@+id/tv_total_cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp"  />
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_below="@+id/rel_top"
+                android:background="#E5ECF8" />
+
+        <LinearLayout
+                android:id="@+id/linear_progress_clients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <ProgressBar
+                    android:id="@+id/progressBar_cyclic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
